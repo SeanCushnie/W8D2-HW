@@ -93,9 +93,15 @@ function App() {
   }
 
   const divide = (number) => {
+    let NaN = "undefined"
     let calculatedNumber = parseFloat(previousTotal) / parseFloat(number);
+    if (number === 0){
+      setRunningTotal(NaN)
+      setCalculatedTotal(NaN)
+    }
+    else {
     setRunningTotal(calculatedNumber);
-    setCalculatedTotal(calculatedNumber);
+    setCalculatedTotal(calculatedNumber);}
   }
 
 
